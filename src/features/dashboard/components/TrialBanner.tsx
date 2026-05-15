@@ -41,16 +41,16 @@ export function TrialBanner({ daysRemaining, onDismiss }: TrialBannerProps) {
   const canDismiss = isDays1to4 && onDismiss;
 
   return (
-    <div className={`${toneClasses.container} py-4`}>
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-6 px-8">
+    <div className={`${toneClasses.container} py-3 md:py-4`}>
+      <div className="mx-auto flex max-w-[1280px] flex-col gap-3 px-4 md:flex-row md:items-center md:justify-between md:gap-6 md:px-8">
         <div className="flex items-center gap-2.5">
-          <AlertCircle className={`size-[18px] ${toneClasses.text}`} />
+          <AlertCircle className={`size-[18px] shrink-0 ${toneClasses.text}`} />
           <span className={`text-sm font-bold ${toneClasses.text}`}>
             {message}
           </span>
         </div>
 
-        <div className="max-w-60 flex-1">
+        <div className="hidden max-w-60 flex-1 md:block">
           <div className={`h-2 overflow-hidden rounded ${toneClasses.track}`}>
             <div
               className={`h-full rounded transition-[width] ${toneClasses.progress}`}
@@ -64,7 +64,7 @@ export function TrialBanner({ daysRemaining, onDismiss }: TrialBannerProps) {
 
         <div className="flex items-center gap-3">
           <Button
-            className={`h-10 px-5 text-sm font-semibold ${toneClasses.button}`}
+            className={`h-9 px-4 text-sm font-semibold md:h-10 md:px-5 ${toneClasses.button}`}
           >
             {parentDashboardContent.upgradeNow}
           </Button>

@@ -107,7 +107,7 @@ export function ParentChildCard({
       )}
 
       {!needsAttention && child.hasActivity ? (
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
             <span>📊</span>
             <span className="font-semibold text-foreground">{child.avgScore}%</span>
@@ -115,17 +115,13 @@ export function ParentChildCard({
             {child.scoreChange === "down" ? <TrendingDown className="size-3.5 text-danger" /> : null}
             {child.scoreChange === "flat" ? <Minus className="size-3.5 text-muted-foreground" /> : null}
           </div>
-          <span>&middot;</span>
           <span>✅ {child.totalTests} {parentDashboardContent.testsLabel}</span>
-          <span>&middot;</span>
           <span>🕒 {child.lastActivity}</span>
         </div>
       ) : needsAttention ? (
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
           <span>📊 —</span>
-          <span>&middot;</span>
           <span>✅ 0 {parentDashboardContent.testsLabel}</span>
-          <span>&middot;</span>
           <span>🕒 {parentDashboardContent.neverActivity}</span>
         </div>
       ) : null}
@@ -137,8 +133,8 @@ export function ParentChildCard({
           </Button>
         ) : (
           <>
-            <div className="flex gap-3">
-              <Button className="h-12 flex-[2] bg-brand text-white hover:bg-brand-hover text-sm font-semibold" size="lg">
+            <div className="flex flex-wrap gap-3">
+              <Button className="h-12 min-w-0 flex-[2] bg-brand text-sm font-semibold text-white hover:bg-brand-hover" size="lg">
                 {child.hasActivity
                   ? parentDashboardContent.continuePractice
                   : parentDashboardContent.startPractice}

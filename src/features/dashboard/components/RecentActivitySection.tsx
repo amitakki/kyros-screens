@@ -12,7 +12,7 @@ export function RecentActivitySection({
   activityGroups,
 }: RecentActivitySectionProps) {
   return (
-    <section className="rounded-xl border border-border bg-card p-8 shadow-sm">
+    <section className="rounded-xl border border-border bg-card p-4 shadow-sm md:p-8">
       <SectionHeader
         actions={
           <a

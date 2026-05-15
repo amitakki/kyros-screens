@@ -46,15 +46,15 @@ export function ParentDashboardPage() {
         />
       ) : null}
 
-      <PageContainer className="py-12">
-        <div className="mb-10">
+      <PageContainer className="py-6 md:py-12">
+        <div className="mb-6 md:mb-10">
           <SectionHeader
             description={parentDashboardContent.greetingSuffix}
             title={`${parentDashboardContent.greetingPrefix}, ${parentName}! 👋`}
           />
         </div>
 
-        <section className="mb-12">
+        <section className="mb-8 md:mb-12">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
             {parentDashboardContent.childrenTitle}
           </p>
