@@ -1,14 +1,23 @@
-import { useState, type CSSProperties } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import { Archive, Download, MoreVertical, RotateCcw } from "lucide-react";
 
 import { Button } from "../../../app/components/ui/button";
 import { parentDashboardContent } from "../content";
+
+const MENU_HEIGHT_ESTIMATE = 148;
+const MENU_WIDTH = 220;
 
 interface ChildOverflowMenuProps {
   childName: string;
   light?: boolean;
   onArchive: () => void;
   onReset: () => void;
+}
+
+interface MenuPos {
+  top?: number;
+  bottom?: number;
+  right: number;
 }
 
 export function ChildOverflowMenu({
@@ -18,9 +27,25 @@ export function ChildOverflowMenu({
   onReset,
 }: ChildOverflowMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [menuPos, setMenuPos] = useState<MenuPos>({ top: 0, right: 0 });
+  const triggerRef = useRef<HTMLDivElement>(null);
+
+  function handleOpen() {
+    if (!isOpen && triggerRef.current) {
+      const rect = triggerRef.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const rightOffset = window.innerWidth - rect.right;
+      if (spaceBelow < MENU_HEIGHT_ESTIMATE) {
+        setMenuPos({ bottom: window.innerHeight - rect.top + 8, right: rightOffset });
+      } else {
+        setMenuPos({ top: rect.bottom + 8, right: rightOffset });
+      }
+    }
+    setIsOpen((current) => !current);
+  }
 
   return (
-    <div style={{ position: "relative" }}>
+    <div ref={triggerRef} style={{ position: "relative" }}>
       <Button
         style={{
           height: light ? 42 : 48,
@@ -30,7 +55,7 @@ export function ChildOverflowMenu({
           border: light ? "1px solid rgba(255,255,255,0.2)" : undefined,
         }}
         variant="ghost"
-        onClick={() => setIsOpen((current) => !current)}
+        onClick={handleOpen}
       >
         <MoreVertical size={18} />
       </Button>
@@ -43,15 +68,15 @@ export function ChildOverflowMenu({
           />
           <div
             style={{
-              position: "absolute",
-              top: "100%",
-              right: 0,
-              marginTop: 8,
+              position: "fixed",
+              top: menuPos.top,
+              bottom: menuPos.bottom,
+              right: menuPos.right,
               background: "#ffffff",
               border: "1px solid #e2e8f0",
               borderRadius: 10,
               boxShadow: "0 12px 40px rgba(15, 23, 42, 0.20), 0 2px 8px rgba(15, 23, 42, 0.10)",
-              minWidth: 220,
+              minWidth: MENU_WIDTH,
               zIndex: 20,
               overflow: "hidden",
             }}
