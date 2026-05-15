@@ -6,12 +6,14 @@ import { parentDashboardContent } from "../content";
 
 interface ChildOverflowMenuProps {
   childName: string;
+  light?: boolean;
   onArchive: () => void;
   onReset: () => void;
 }
 
 export function ChildOverflowMenu({
   childName,
+  light,
   onArchive,
   onReset,
 }: ChildOverflowMenuProps) {
@@ -20,7 +22,13 @@ export function ChildOverflowMenu({
   return (
     <div style={{ position: "relative" }}>
       <Button
-        style={{ height: 48, paddingLeft: 16, paddingRight: 16 }}
+        style={{
+          height: light ? 42 : 48,
+          paddingLeft: 16,
+          paddingRight: 16,
+          color: light ? "rgba(255,255,255,0.7)" : undefined,
+          border: light ? "1px solid rgba(255,255,255,0.2)" : undefined,
+        }}
         variant="ghost"
         onClick={() => setIsOpen((current) => !current)}
       >
@@ -39,28 +47,26 @@ export function ChildOverflowMenu({
               top: "100%",
               right: 0,
               marginTop: 8,
-              background: "var(--surface-raised)",
-              border: "1px solid var(--border-subtle)",
-              borderRadius: 8,
-              boxShadow: "var(--shadow-popover)",
+              background: "#ffffff",
+              border: "1px solid #e2e8f0",
+              borderRadius: 10,
+              boxShadow: "0 12px 40px rgba(15, 23, 42, 0.20), 0 2px 8px rgba(15, 23, 42, 0.10)",
               minWidth: 220,
               zIndex: 20,
+              overflow: "hidden",
             }}
           >
             <button
               style={menuButtonStyle}
               onClick={() => setIsOpen(false)}
               onMouseEnter={(event) => {
-                event.currentTarget.style.background = "var(--surface-subtle)";
+                event.currentTarget.style.background = "#f8fafc";
               }}
               onMouseLeave={(event) => {
                 event.currentTarget.style.background = "none";
               }}
             >
               <Download size={16} /> {parentDashboardContent.downloadReport}
-              <span style={{ fontSize: 12, color: "var(--text-subtle)", marginLeft: "auto" }}>
-                {parentDashboardContent.comingSoon}
-              </span>
             </button>
             <button
               style={menuButtonStyle}
@@ -69,7 +75,7 @@ export function ChildOverflowMenu({
                 setIsOpen(false);
               }}
               onMouseEnter={(event) => {
-                event.currentTarget.style.background = "var(--surface-subtle)";
+                event.currentTarget.style.background = "#f8fafc";
               }}
               onMouseLeave={(event) => {
                 event.currentTarget.style.background = "none";
@@ -88,7 +94,7 @@ export function ChildOverflowMenu({
                 setIsOpen(false);
               }}
               onMouseEnter={(event) => {
-                event.currentTarget.style.background = "var(--danger-subtle)";
+                event.currentTarget.style.background = "#fef2f2";
               }}
               onMouseLeave={(event) => {
                 event.currentTarget.style.background = "none";

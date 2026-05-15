@@ -31,8 +31,9 @@ export interface ChildDetailModel {
   schools: string[];
   currentTopic: string;
   subjects: SubjectProgress[];
-  topics: Topic[];
+  topicsPerSubject: Record<string, Topic[]>;
   testHistory: TestRecord[];
+  totalTests: number;
 }
 
 export interface DashboardChild {

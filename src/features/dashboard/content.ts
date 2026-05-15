@@ -19,6 +19,7 @@ export const childDetailContent = {
   scoreTrendInsight: t('childDetail.scoreTrendInsight'),
   scoreTrendAttention: t('childDetail.scoreTrendAttention'),
   subjectBreakdownTitle: t('childDetail.subjectBreakdownTitle'),
+  learningPathTitle: t('childDetail.learningPathTitle'),
   currentTopicBadge: t('childDetail.currentTopicBadge'),
   passTargetLabel: t('childDetail.passTargetLabel'),
   unlockHintPrefix: t('childDetail.unlockHintPrefix'),
