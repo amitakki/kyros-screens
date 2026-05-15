@@ -61,11 +61,15 @@ export const landingPageContent = {
     steps: arr<string[]>('hero.steps'),
     trustItems: arr<Array<{ icon: string; label: string }>>('hero.trustItems'),
   },
-  schoolTicker: {
-    prefix: t('schoolTicker.prefix'),
-    suffix: t('schoolTicker.suffix'),
-  },
   schools: arr<string[]>('schools'),
+  schoolsSection: {
+    title: t('schoolsSection.title'),
+    subtitle: t('schoolsSection.subtitle'),
+    examBoardsLabel: t('schoolsSection.examBoardsLabel'),
+    examBoards: arr<string[]>('schoolsSection.examBoards'),
+    moreSchoolsLabel: t('schoolsSection.moreSchoolsLabel'),
+    footerNote: t('schoolsSection.footerNote'),
+  },
   faqItems: arr<Array<{ q: string; a: string }>>('faqItems'),
   tryAQuestion: {
     title: t('tryAQuestion.title'),

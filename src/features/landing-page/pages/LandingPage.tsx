@@ -9,7 +9,7 @@ import { LandingHeader } from "../components/LandingHeader";
 import { OutcomesStripSection } from "../components/OutcomesStripSection";
 import { PathVisualization } from "../components/PathVisualization";
 import { PricingSection } from "../components/PricingSection";
-import { SchoolTickerSection } from "../components/SchoolTickerSection";
+import { SchoolsSection } from "../components/SchoolsSection";
 import { TestimonialsSection } from "../components/TestimonialsSection";
 import { TryAQuestionSection } from "../components/TryAQuestionSection";
 import { WhoIsItForSection } from "../components/WhoIsItForSection";
@@ -31,26 +31,15 @@ export function LandingPage() {
     outcomesStrip,
     pathVisualization,
     pricing,
-    schoolTicker,
     schools,
+    schoolsSection,
     testimonials,
     tryAQuestion,
     whoIsItFor,
   } = landingPageContent;
-  const tickerItems = [...schools, ...schools];
-
 
   return (
-    <div
-      className="min-h-screen bg-surface-subtle"
-    >
-      {/* ─── Ticker keyframes ─── */}
-      <style>{`
-        @keyframes kyrosTickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .kyros-ticker-track { display: flex; animation: kyrosTickerScroll 36s linear infinite; will-change: transform; }
-        .kyros-ticker-track:hover { animation-play-state: paused; }
-      `}</style>
-
+    <div className="min-h-screen bg-surface-subtle">
       <LandingHeader
         isMobile={isMobile}
         menuOpen={menuOpen}
@@ -69,13 +58,6 @@ export function LandingPage() {
         visual={<PathVisualization content={pathVisualization} />}
       />
 
-      <SchoolTickerSection
-        schools={schools}
-        tickerItems={tickerItems}
-        prefix={schoolTicker.prefix}
-        suffix={schoolTicker.suffix}
-      />
-
       <OutcomesStripSection
         isMobile={isMobile}
         stats={outcomesStrip.stats}
@@ -83,6 +65,8 @@ export function LandingPage() {
       />
 
       <WhoIsItForSection isMobile={isMobile} content={whoIsItFor} />
+
+      <SchoolsSection isMobile={isMobile} schools={schools} content={schoolsSection} />
 
       <HowItWorksSection
         isMobile={isMobile}

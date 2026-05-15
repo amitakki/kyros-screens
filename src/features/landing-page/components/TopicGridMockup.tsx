@@ -14,9 +14,9 @@ type TopicGridContent = {
   adaptationBody: string;
 };
 
-type Props = { content: TopicGridContent };
+type Props = { isMobile: boolean; content: TopicGridContent };
 
-export function TopicGridMockup({ content }: Props) {
+export function TopicGridMockup({ isMobile, content }: Props) {
   return (
     <div
       style={{
@@ -24,10 +24,11 @@ export function TopicGridMockup({ content }: Props) {
         border: "1px solid var(--border-subtle)",
         borderRadius: 12,
         boxShadow: "var(--shadow-soft)",
-        padding: 20,
+        padding: isMobile ? 14 : 20,
+        overflow: "hidden",
       }}
     >
-      <div style={{ display: "flex", gap: 6, marginBottom: 16, overflowX: "auto" }}>
+      <div style={{ display: "flex", gap: 6, marginBottom: 16, overflowX: "auto", minWidth: 0 }}>
         {content.subjects.map((s, i) => (
           <div
             key={i}
@@ -62,7 +63,7 @@ export function TopicGridMockup({ content }: Props) {
         ))}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 6 }}>
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(3, minmax(0, 1fr))" : "repeat(4, minmax(0, 1fr))", gap: 6 }}>
         {content.topics.map((topic, i) => (
           <div
             key={i}

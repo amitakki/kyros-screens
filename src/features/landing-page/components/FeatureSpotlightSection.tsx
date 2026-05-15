@@ -96,8 +96,8 @@ export function FeatureSpotlightSection({ isMobile, content }: Props) {
             </div>
           )}
 
-          <div>
-            <TopicGridMockup content={content.mockup.topicGrid} />
+          <div style={{ minWidth: 0 }}>
+            <TopicGridMockup isMobile={isMobile} content={content.mockup.topicGrid} />
             <ParentDashboardPanel content={content.mockup.parentDashboard} />
           </div>
 

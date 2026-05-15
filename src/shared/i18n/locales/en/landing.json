@@ -45,6 +45,14 @@
     "Wilson's School",
     "Altrincham Grammar"
   ],
+  "schoolsSection": {
+    "title": "288 grammar schools covered",
+    "subtitle": "Select your target school at setup — Kyros tailors mock exam formats and difficulty to match.",
+    "examBoardsLabel": "Exam formats covered:",
+    "examBoards": ["GL Assessment", "CEM", "Kent Test", "ISEB"],
+    "moreSchoolsLabel": "+ 273 more schools",
+    "footerNote": "Can't find your target school? We add new schools every month."
+  },
   "faqItems": [
     {
       "q": "Is this suitable for my child's level?",
