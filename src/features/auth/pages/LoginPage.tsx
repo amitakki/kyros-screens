@@ -176,7 +176,7 @@ export function LoginPage() {
         </Link>
 
         <div style={{ width: '100%', maxWidth: 396, marginTop: isMobile ? 64 : 0 }}>
-          <h1 style={{ fontSize: 30, fontWeight: 700, color: 'var(--text-heading)', marginBottom: 8 }}>
+          <h1 style={{ fontSize: isMobile ? 26 : 30, fontWeight: 700, color: 'var(--text-heading)', marginBottom: 8 }}>
             {content.welcomeHeading}
           </h1>
           <p style={{ fontSize: 15, color: 'var(--text-body)', marginBottom: 32 }}>

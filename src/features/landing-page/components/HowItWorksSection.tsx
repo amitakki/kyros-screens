@@ -17,11 +17,6 @@ type HowItWorksContent = {
   description: string;
   steps: readonly HowItWorksStep[];
   ctaLabel: string;
-  quote: {
-    body: string;
-    avatarLabel: string;
-    attribution: string;
-  };
 };
 
 type HowItWorksSectionProps = {
@@ -51,18 +46,18 @@ export function HowItWorksSection({
       id="how-it-works"
       style={{
         background: "var(--surface-subtle)",
-        paddingTop: 64,
-        paddingBottom: 64,
+        paddingTop: isMobile ? 40 : 64,
+        paddingBottom: isMobile ? 40 : 64,
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-8">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div
           className="text-center"
-          style={{ marginBottom: 64 }}
+          style={{ marginBottom: isMobile ? 40 : 64 }}
         >
           <h2
             style={{
-              fontSize: 36,
+              fontSize: isMobile ? 24 : 36,
               fontWeight: 700,
               color: "var(--text-heading)",
               marginBottom: 16,
@@ -182,7 +177,6 @@ export function HowItWorksSection({
           style={{
             textAlign: "center",
             marginTop: 48,
-            marginBottom: 64,
           }}
         >
           <Link to={ROUTES.register}>
@@ -208,65 +202,6 @@ export function HowItWorksSection({
           </Link>
         </div>
 
-        <div
-          style={{
-            textAlign: "center",
-            maxWidth: 600,
-            margin: "0 auto",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 56,
-              lineHeight: 0.75,
-              color: "var(--brand-muted)",
-              fontFamily: "Georgia, serif",
-              marginBottom: 16,
-            }}
-          >
-            "
-          </div>
-          <p
-            style={{
-              fontSize: 22,
-              fontStyle: "italic",
-              color: "var(--text-heading)",
-              lineHeight: 1.6,
-              marginBottom: 20,
-            }}
-          >
-            {content.quote.body}
-          </p>
-          <cite
-            style={{
-              fontSize: 14,
-              color: "var(--text-subtle)",
-              fontStyle: "normal",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-            }}
-          >
-            <div
-              style={{
-                width: 32,
-                height: 32,
-                borderRadius: "50%",
-                background: "linear-gradient(135deg, var(--brand), var(--brand-light))",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 12,
-                fontWeight: 700,
-                color: "var(--brand-foreground)",
-              }}
-            >
-              {content.quote.avatarLabel}
-            </div>
-            <span>{content.quote.attribution}</span>
-          </cite>
-        </div>
       </div>
     </section>
   );

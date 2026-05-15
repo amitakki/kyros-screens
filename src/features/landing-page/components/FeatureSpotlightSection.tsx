@@ -44,12 +44,12 @@ export function FeatureSpotlightSection({ isMobile, content }: Props) {
   return (
     <section
       style={{
-        background: "var(--surface-raised)",
-        paddingTop: 64,
-        paddingBottom: 64,
+        background: "var(--surface-subtle)",
+        paddingTop: isMobile ? 40 : 64,
+        paddingBottom: isMobile ? 40 : 64,
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-8">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div
           style={{
             display: "grid",

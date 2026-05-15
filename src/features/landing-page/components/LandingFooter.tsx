@@ -32,7 +32,7 @@ export function LandingFooter({ isMobile, content }: Props) {
         paddingBottom: 40,
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-8">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div
           style={{
             display: "grid",

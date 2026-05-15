@@ -81,7 +81,7 @@ export function CreateChildProfilePage() {
         }}
       >
         <div
-          className="max-w-[1280px] mx-auto px-8"
+          className="max-w-[1280px] mx-auto px-4 lg:px-8"
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
         >
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

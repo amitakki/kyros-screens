@@ -11,7 +11,6 @@ type HeroContent = {
   proofItems: readonly { icon: string; label: string }[];
   primaryCtaLabel: string;
   microcopy: string;
-  steps: readonly string[];
   trustItems: readonly { icon: string; label: string }[];
 };
 
@@ -83,10 +82,10 @@ export function HeroSection({
             </p>
             <h1
               style={{
-                fontSize: 52,
+                fontSize: isMobile ? 32 : 52,
                 fontWeight: 700,
                 color: "var(--text-heading)",
-                lineHeight: 1.15,
+                lineHeight: isMobile ? 1.2 : 1.15,
                 marginBottom: 24,
               }}
             >
@@ -99,7 +98,7 @@ export function HeroSection({
             </h1>
             <p
               style={{
-                fontSize: 18,
+                fontSize: isMobile ? 16 : 18,
                 color: "var(--text-body)",
                 lineHeight: 1.65,
                 marginBottom: 24,
@@ -164,52 +163,6 @@ export function HeroSection({
             >
               {content.microcopy}
             </p>
-
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                fontSize: 12,
-                color: "var(--text-subtle)",
-                marginBottom: 20,
-              }}
-            >
-              {content.steps.map((step, index) => (
-                <span
-                  key={step}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                  }}
-                >
-                  <span
-                    style={{
-                      background: "var(--brand-subtle)",
-                      color: "var(--brand)",
-                      width: 20,
-                      height: 20,
-                      borderRadius: "50%",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontWeight: 700,
-                      fontSize: 11,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {index + 1}
-                  </span>
-                  <span>{step}</span>
-                  {index < content.steps.length - 1 && (
-                    <span style={{ color: "var(--brand-muted)" }}>
-                      {"->"}
-                    </span>
-                  )}
-                </span>
-              ))}
-            </div>
 
             <div
               style={{

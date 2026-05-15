@@ -268,7 +268,7 @@ export function RegisterPage() {
         </Link>
 
         <div style={{ width: '100%', maxWidth: 420, paddingTop: isMobile ? 80 : 24, paddingBottom: 24 }}>
-          <h1 style={{ fontSize: 28, fontWeight: 700, color: 'var(--text-heading)', marginBottom: 6 }}>
+          <h1 style={{ fontSize: isMobile ? 24 : 28, fontWeight: 700, color: 'var(--text-heading)', marginBottom: 6 }}>
             {content.heading}
           </h1>
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 28 }}>

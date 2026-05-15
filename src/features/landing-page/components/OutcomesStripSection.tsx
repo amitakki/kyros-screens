@@ -18,11 +18,11 @@ export function OutcomesStripSection({
     <section
       style={{
         background: "var(--brand-dark)",
-        paddingTop: 64,
-        paddingBottom: 64,
+        paddingTop: isMobile ? 40 : 64,
+        paddingBottom: isMobile ? 40 : 64,
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-8">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div
           style={{
             display: "grid",
@@ -36,7 +36,7 @@ export function OutcomesStripSection({
             <div key={stat.number}>
               <div
                 style={{
-                  fontSize: 52,
+                  fontSize: isMobile ? 40 : 52,
                   fontWeight: 700,
                   color: "var(--surface-raised)",
                   lineHeight: 1.1,
@@ -47,7 +47,7 @@ export function OutcomesStripSection({
               </div>
               <div
                 style={{
-                  fontSize: 16,
+                  fontSize: isMobile ? 14 : 16,
                   color: "var(--brand-muted)",
                   lineHeight: 1.6,
                   maxWidth: 260,

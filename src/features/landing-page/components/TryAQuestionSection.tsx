@@ -22,17 +22,17 @@ type TryAQuestionContent = {
   correctAnswer: string;
 };
 
-type Props = { content: TryAQuestionContent };
+type Props = { isMobile: boolean; content: TryAQuestionContent };
 
-export function TryAQuestionSection({ content }: Props) {
+export function TryAQuestionSection({ isMobile, content }: Props) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section style={{ background: "var(--surface-raised)", paddingTop: 64, paddingBottom: 64 }}>
-      <div className="max-w-[1280px] mx-auto px-8">
+    <section style={{ background: "var(--surface-subtle)", paddingTop: isMobile ? 40 : 64, paddingBottom: isMobile ? 40 : 64 }}>
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <h2 style={{ fontSize: 32, fontWeight: 700, color: "var(--text-heading)", marginBottom: 12 }}>
+          <h2 style={{ fontSize: isMobile ? 24 : 32, fontWeight: 700, color: "var(--text-heading)", marginBottom: 12 }}>
             {content.title}
           </h2>
           <p style={{ fontSize: 16, color: "var(--text-body)" }}>{content.description}</p>

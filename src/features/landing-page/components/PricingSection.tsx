@@ -40,15 +40,15 @@ export function PricingSection({ isMobile, content }: Props) {
       id="pricing"
       style={{
         background: "var(--surface-subtle)",
-        paddingTop: 64,
-        paddingBottom: 64,
+        paddingTop: isMobile ? 40 : 64,
+        paddingBottom: isMobile ? 40 : 64,
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-8">
-        <div className="text-center" style={{ marginBottom: 56 }}>
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
+        <div className="text-center" style={{ marginBottom: isMobile ? 32 : 56 }}>
           <h2
             style={{
-              fontSize: 32,
+              fontSize: isMobile ? 24 : 32,
               fontWeight: 700,
               color: "var(--text-heading)",
               marginBottom: 14,
@@ -68,7 +68,8 @@ export function PricingSection({ isMobile, content }: Props) {
             gap: 24,
             maxWidth: 960,
             margin: "0 auto 36px",
-            alignItems: "start",
+            alignItems: "stretch",
+            paddingTop: 20,
           }}
         >
           {content.plans.map((plan) => {
@@ -80,15 +81,15 @@ export function PricingSection({ isMobile, content }: Props) {
                     ? "2px solid var(--brand)"
                     : "1px solid var(--border-subtle)",
                   borderRadius: 12,
+                  height: "100%",
                   ...(plan.highlight
                     ? {
                         boxShadow: `0 8px 32px color-mix(in oklch, var(--brand) 18%, transparent)`,
-                        transform: "scale(1.04)",
                       }
                     : {}),
                 }}
               >
-                <CardContent style={{ padding: 32 }}>
+                <CardContent style={{ padding: 32, display: "flex", flexDirection: "column", height: "100%" }}>
                   <p
                     style={{
                       fontSize: 14,
@@ -147,7 +148,7 @@ export function PricingSection({ isMobile, content }: Props) {
                     </p>
                   </div>
                   <PricingFeatureList items={content.featureItems} />
-                  <Link to="/register">
+                  <Link to="/register" style={{ marginTop: "auto", display: "block" }}>
                     <Button
                       variant={plan.ctaPrimary ? undefined : "outline"}
                       style={{
@@ -175,7 +176,7 @@ export function PricingSection({ isMobile, content }: Props) {
 
             if (plan.popularLabel) {
               return (
-                <div key={plan.label} style={{ position: "relative" }}>
+                <div key={plan.label} style={{ position: "relative", display: "flex", flexDirection: "column" }}>
                   <div
                     style={{
                       position: "absolute",
@@ -200,7 +201,7 @@ export function PricingSection({ isMobile, content }: Props) {
               );
             }
 
-            return <div key={plan.label}>{card}</div>;
+            return <div key={plan.label} style={{ display: "flex", flexDirection: "column" }}>{card}</div>;
           })}
         </div>
 

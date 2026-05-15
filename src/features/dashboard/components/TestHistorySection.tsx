@@ -2,6 +2,7 @@ import { Search } from "lucide-react";
 
 import { Button } from "../../../app/components/ui/button";
 import { Input } from "../../../app/components/ui/input";
+import { useIsMobile } from "../../../shared/hooks/useIsMobile";
 import { testHistoryContent as c } from "../content";
 import type { TestRecord } from "../types";
 
@@ -94,6 +95,7 @@ export function TestHistorySection({
   onSearchQueryChange,
   onSortByChange,
 }: TestHistorySectionProps) {
+  const isMobile = useIsMobile();
   return (
     <div
       style={{
@@ -158,7 +160,7 @@ export function TestHistorySection({
         }}
       >
         {/* Search */}
-        <div style={{ position: "relative", flex: "0 0 240px" }}>
+        <div style={{ position: "relative", flex: isMobile ? "1 1 auto" : "0 0 240px" }}>
           <Search
             size={15}
             style={{
@@ -284,7 +286,7 @@ export function TestHistorySection({
                     padding: "11px 14px",
                     fontSize: 13,
                     color: "var(--text-body)",
-                    maxWidth: 240,
+                    maxWidth: isMobile ? 120 : 240,
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     whiteSpace: "nowrap",

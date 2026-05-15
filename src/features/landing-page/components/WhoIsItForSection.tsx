@@ -21,18 +21,18 @@ export function WhoIsItForSection({ isMobile, content }: Props) {
     <section
       style={{
         background: "var(--surface-subtle)",
-        paddingTop: 64,
-        paddingBottom: 64,
+        paddingTop: isMobile ? 40 : 64,
+        paddingBottom: isMobile ? 40 : 64,
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-8">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <h2
           style={{
-            fontSize: 32,
+            fontSize: isMobile ? 24 : 32,
             fontWeight: 700,
             color: "var(--text-heading)",
             textAlign: "center",
-            marginBottom: 56,
+            marginBottom: isMobile ? 32 : 56,
           }}
         >
           {content.title}

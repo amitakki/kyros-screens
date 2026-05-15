@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useIsMobile } from "../../../shared/hooks/useIsMobile";
-import { BeforeAfterSection } from "../components/BeforeAfterSection";
 import { FaqSection } from "../components/FaqSection";
 import { FeatureSpotlightSection } from "../components/FeatureSpotlightSection";
 import { HeroSection } from "../components/HeroSection";
@@ -13,7 +12,6 @@ import { PricingSection } from "../components/PricingSection";
 import { SchoolTickerSection } from "../components/SchoolTickerSection";
 import { TestimonialsSection } from "../components/TestimonialsSection";
 import { TryAQuestionSection } from "../components/TryAQuestionSection";
-import { WhyKyrosSection } from "../components/WhyKyrosSection";
 import { WhoIsItForSection } from "../components/WhoIsItForSection";
 import { landingPageContent } from "../content";
 
@@ -23,7 +21,6 @@ export function LandingPage() {
   const isMobile = useIsMobile();
 
   const {
-    beforeAfter,
     faqItems,
     faqSection,
     featureSpotlight,
@@ -39,7 +36,6 @@ export function LandingPage() {
     testimonials,
     tryAQuestion,
     whoIsItFor,
-    whyKyros,
   } = landingPageContent;
   const tickerItems = [...schools, ...schools];
 
@@ -86,6 +82,8 @@ export function LandingPage() {
         footnote={outcomesStrip.footnote}
       />
 
+      <WhoIsItForSection isMobile={isMobile} content={whoIsItFor} />
+
       <HowItWorksSection
         isMobile={isMobile}
         content={howItWorks}
@@ -96,17 +94,12 @@ export function LandingPage() {
         content={featureSpotlight}
       />
 
-      <BeforeAfterSection content={beforeAfter} />
-
-      <TryAQuestionSection content={tryAQuestion} />
+      <TryAQuestionSection isMobile={isMobile} content={tryAQuestion} />
 
       <TestimonialsSection isMobile={isMobile} content={testimonials} />
 
-      <WhoIsItForSection isMobile={isMobile} content={whoIsItFor} />
-
-      <WhyKyrosSection isMobile={isMobile} content={whyKyros} />
-
       <FaqSection
+        isMobile={isMobile}
         items={faqItems}
         openFaq={openFaq}
         onToggleFaq={(index) =>
