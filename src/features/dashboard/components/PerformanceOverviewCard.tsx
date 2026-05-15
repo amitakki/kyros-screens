@@ -5,7 +5,7 @@ import type { TestRecord } from "../types";
 
 // ── Subject colour palette (mirrors mock SubjectProgress colours) ─
 const SUBJECT_COLOR: Record<string, string> = {
-  "Maths":                "#4f46e5",
+  "Maths":                "#818cf8",
   "English":              "#10b981",
   "Verbal Reasoning":     "#f59e0b",
   "Non-Verbal Reasoning": "#ef4444",
@@ -26,7 +26,7 @@ const SUBJECT_LABEL: Record<string, string> = {
 };
 
 const ALL_KEY = "all";
-const ALL_LINE = "#cbd5e1";   // neutral slate for mixed-subject connecting line
+const ALL_LINE = "var(--border-subtle)";
 
 // ── Ring gauge ────────────────────────────────────────────────────
 const READINESS_SCORE = 0.72;
@@ -127,7 +127,7 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
   // Single data point — centre it
   if (visible.length === 1) {
     const rec = visible[0];
-    const color = isAll ? (SUBJECT_COLOR[rec.subject] ?? "#4f46e5") : (SUBJECT_COLOR[activeSubject] ?? "#4f46e5");
+    const color = isAll ? (SUBJECT_COLOR[rec.subject] ?? "#818cf8") : (SUBJECT_COLOR[activeSubject] ?? "#818cf8");
     return (
       <div
         style={{
@@ -178,12 +178,12 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
   const lineD = pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
   const areaD = `${lineD} L${pts[n - 1].x.toFixed(1)},${(PT + CH).toFixed(1)} L${pts[0].x.toFixed(1)},${(PT + CH).toFixed(1)} Z`;
 
-  const lineColor = isAll ? ALL_LINE : (SUBJECT_COLOR[activeSubject] ?? "#4f46e5");
+  const lineColor = isAll ? ALL_LINE : (SUBJECT_COLOR[activeSubject] ?? "#818cf8");
   const gradId    = `perf-grad-${activeSubject.replace(/\s+/g, "-").toLowerCase()}`;
 
   function handleDotEnter(e: React.MouseEvent<SVGCircleElement>, pt: typeof pts[0]) {
     const rect = (e.target as SVGCircleElement).getBoundingClientRect();
-    const dotColor  = isAll ? (SUBJECT_COLOR[pt.record.subject] ?? "#4f46e5") : lineColor;
+    const dotColor  = isAll ? (SUBJECT_COLOR[pt.record.subject] ?? "#818cf8") : lineColor;
     const dotSubtle = isAll ? (SUBJECT_SUBTLE[pt.record.subject] ?? "#eef2ff") : (SUBJECT_SUBTLE[activeSubject] ?? "#eef2ff");
     setTooltip({
       x: rect.left + rect.width / 2,
@@ -207,25 +207,25 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
           <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
             {isAll ? (
               <>
-                <stop offset="0%"   stopColor={ALL_LINE} stopOpacity="0.12" />
-                <stop offset="100%" stopColor={ALL_LINE} stopOpacity="0.01" />
+                <stop offset="0%"   style={{ stopColor: ALL_LINE }} stopOpacity="0.12" />
+                <stop offset="100%" style={{ stopColor: ALL_LINE }} stopOpacity="0.01" />
               </>
             ) : (
               <>
-                <stop offset="0%"   stopColor={lineColor} stopOpacity="0.22" />
-                <stop offset="100%" stopColor={lineColor} stopOpacity="0.02" />
+                <stop offset="0%"   style={{ stopColor: lineColor }} stopOpacity="0.22" />
+                <stop offset="100%" style={{ stopColor: lineColor }} stopOpacity="0.02" />
               </>
             )}
           </linearGradient>
         </defs>
 
         {/* Y-axis labels */}
-        <text x={PL - 5} y={PT + 4}      textAnchor="end" fill="#94a3b8" fontSize="10" fontFamily="sans-serif">{Math.round(maxS)}%</text>
-        <text x={PL - 5} y={PT + CH + 4} textAnchor="end" fill="#94a3b8" fontSize="10" fontFamily="sans-serif">{Math.round(minS)}%</text>
+        <text x={PL - 5} y={PT + 4}      textAnchor="end" style={{ fill: "var(--text-subtle)" }} fontSize="10" fontFamily="sans-serif">{Math.round(maxS)}%</text>
+        <text x={PL - 5} y={PT + CH + 4} textAnchor="end" style={{ fill: "var(--text-subtle)" }} fontSize="10" fontFamily="sans-serif">{Math.round(minS)}%</text>
 
         {/* Average dashed rule */}
-        <line x1={PL} y1={avgY} x2={VW - PR + 4} y2={avgY} stroke="#e2e8f0" strokeWidth="1.2" strokeDasharray="4 3" />
-        <text x={VW - PR + 8} y={avgY + 4} fill="#94a3b8" fontSize="9" fontFamily="sans-serif">{avg}% avg</text>
+        <line x1={PL} y1={avgY} x2={VW - PR + 4} y2={avgY} style={{ stroke: "var(--border-subtle)" }} strokeWidth="1.2" strokeDasharray="4 3" />
+        <text x={VW - PR + 8} y={avgY + 4} style={{ fill: "var(--text-subtle)" }} fontSize="9" fontFamily="sans-serif">{avg}% avg</text>
 
         {/* Area fill */}
         <path d={areaD} fill={`url(#${gradId})`} />
@@ -234,7 +234,7 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
         <path
           d={lineD}
           fill="none"
-          stroke={lineColor}
+          style={{ stroke: lineColor }}
           strokeWidth={isAll ? "1.5" : "2.5"}
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -244,7 +244,7 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
         {/* Data point dots — larger hit area via transparent outer circle */}
         {pts.map((p, i) => {
           const dotColor = isAll
-            ? (SUBJECT_COLOR[p.record.subject] ?? "#4f46e5")
+            ? (SUBJECT_COLOR[p.record.subject] ?? "#818cf8")
             : lineColor;
           const isHovered = tooltip?.record === p.record;
           return (
@@ -273,8 +273,8 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
         })}
 
         {/* X-axis: first and last date */}
-        <text x={PL}       y={VH - 6} textAnchor="middle" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">{visible[0].date}</text>
-        <text x={VW - PR}  y={VH - 6} textAnchor="middle" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">{visible[n - 1].date}</text>
+        <text x={PL}       y={VH - 6} textAnchor="middle" style={{ fill: "var(--text-subtle)" }} fontSize="9" fontFamily="sans-serif">{visible[0].date}</text>
+        <text x={VW - PR}  y={VH - 6} textAnchor="middle" style={{ fill: "var(--text-subtle)" }} fontSize="9" fontFamily="sans-serif">{visible[n - 1].date}</text>
       </svg>
 
       {/* Fixed-position tooltip — escapes overflow:hidden */}
@@ -285,7 +285,7 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
             left: tooltip.x,
             top: tooltip.y - 8,
             transform: "translate(-50%, -100%)",
-            background: "#1e293b",
+            background: "var(--surface-inverse)",
             borderRadius: 10,
             padding: "10px 13px",
             pointerEvents: "none",
@@ -357,7 +357,7 @@ function ScoreSparkline({ testHistory, activeSubject }: SparklineProps) {
               height: 0,
               borderLeft: "6px solid transparent",
               borderRight: "6px solid transparent",
-              borderTop: "6px solid #1e293b",
+              borderTop: "6px solid var(--surface-inverse)",
             }}
           />
         </div>

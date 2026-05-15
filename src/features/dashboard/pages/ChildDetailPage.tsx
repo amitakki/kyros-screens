@@ -8,13 +8,11 @@ import { ChildProfileSummaryCard } from "../components/ChildProfileSummaryCard";
 import { LearningPathSection } from "../components/LearningPathSection";
 import { NextRecommendedStepCard } from "../components/NextRecommendedStepCard";
 import { PerformanceOverviewCard } from "../components/PerformanceOverviewCard";
-import { StickyFloatingCTA } from "../components/StickyFloatingCTA";
 import { TestHistorySection } from "../components/TestHistorySection";
 import { childDetailContent } from "../content";
 import { childDetailMock } from "../mocks";
 
 export function ChildDetailPage() {
-  const [showStickyCTA, setShowStickyCTA] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("date");
   const [filterSubject, setFilterSubject] = useState("all");
@@ -119,14 +117,6 @@ export function ChildDetailPage() {
         </div>
       </div>
 
-      {/* 6. Sticky CTA */}
-      {showStickyCTA ? (
-        <StickyFloatingCTA
-          childFirstName={firstName}
-          topicName="Topic 8 · Sequences"
-          onDismiss={() => setShowStickyCTA(false)}
-        />
-      ) : null}
     </div>
   );
 }

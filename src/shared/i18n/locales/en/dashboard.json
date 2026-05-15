@@ -53,9 +53,7 @@
     "resetDiagnosticDescription": "This will archive the current learning path and scores. A new diagnostic is required to generate a replacement path. This action cannot be undone.",
     "cancel": "Cancel",
     "editProfile": "Edit Profile",
-    "currentTopicLabel": "current topic",
     "downloadReport": "Download PDF Report",
-    "comingSoon": "(Coming soon)",
     "archiveMenuLabel": "Archive",
     "streakSuffix": "day learning streak"
   },

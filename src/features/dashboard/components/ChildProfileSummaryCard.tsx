@@ -43,7 +43,7 @@ export function ChildProfileSummaryCard({
       {/* ── Dark gradient hero header ── */}
       <div
         style={{
-          background: "linear-gradient(135deg, #1e1b4b 0%, #312e81 55%, #3730a3 100%)",
+          background: "linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-hero-mid) 55%, var(--brand-hero-end) 100%)",
           padding: isMobile ? "24px 20px" : "28px 32px",
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
@@ -183,6 +183,7 @@ export function ChildProfileSummaryCard({
         style={{
           display: "grid",
           gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, 1fr)",
+          background: "var(--brand-subtle)",
         }}
       >
         {[

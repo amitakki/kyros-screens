@@ -13,13 +13,6 @@ interface LearningPathSectionProps {
   weeksRemaining?: number;
 }
 
-const subtleColorMap: Record<string, string> = {
-  "var(--brand)":   "var(--brand-subtle)",
-  "var(--success)": "var(--success-subtle)",
-  "var(--warning)": "var(--warning-subtle)",
-  "var(--danger)":  "var(--danger-subtle)",
-};
-
 type ViewMode = "list" | "chart";
 
 function SubjectCard({
@@ -33,7 +26,6 @@ function SubjectCard({
 
   const completed   = topics.filter((t) => t.status === "completed").length;
   const total       = topics.length;
-  const subtleColor = subtleColorMap[subject.color] ?? "var(--surface-muted)";
 
   return (
     <div
@@ -51,7 +43,7 @@ function SubjectCard({
       <div
         style={{
           padding: "13px 14px 12px",
-          background: subtleColor,
+          background: "var(--surface-subtle)",
           borderBottom: "1px solid var(--border-subtle)",
         }}
       >

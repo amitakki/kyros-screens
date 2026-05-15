@@ -59,9 +59,7 @@ export const parentDashboardContent = {
   resetDiagnosticDescription: t('parentDashboard.resetDiagnosticDescription'),
   cancel: t('parentDashboard.cancel'),
   editProfile: t('parentDashboard.editProfile'),
-  currentTopicLabel: t('parentDashboard.currentTopicLabel'),
   downloadReport: t('parentDashboard.downloadReport'),
-  comingSoon: t('parentDashboard.comingSoon'),
   archiveMenuLabel: t('parentDashboard.archiveMenuLabel'),
   streakSuffix: t('parentDashboard.streakSuffix'),
 };

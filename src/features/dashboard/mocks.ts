@@ -83,7 +83,7 @@ export const childDetailMock: ChildDetailModel = {
   schools: ["Tonbridge Grammar School", "Invicta Grammar School"],
   currentTopic: "Topic 8 - Sequences",
   subjects: [
-    { name: "Maths", progress: 35, color: "var(--brand)" },
+    { name: "Maths", progress: 35, color: "var(--brand-light)" },
     { name: "English", progress: 45, color: "var(--success)" },
     { name: "Verbal Reasoning", progress: 25, color: "var(--warning)" },
     { name: "Non-Verbal Reasoning", progress: 20, color: "var(--danger)" },
