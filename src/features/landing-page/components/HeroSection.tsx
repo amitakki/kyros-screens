@@ -47,7 +47,7 @@ export function HeroSection({
     <section
       className="bg-surface-subtle"
       style={{
-        minHeight: "calc(100vh - 72px)",
+        minHeight: isMobile ? "auto" : "calc(100vh - 72px)",
         display: "flex",
         alignItems: "center",
       }}
@@ -55,8 +55,8 @@ export function HeroSection({
       <div
         className="max-w-[1280px] mx-auto px-6 py-12 w-full"
         style={{
-          paddingTop: isMobile ? 40 : 80,
-          paddingBottom: isMobile ? 40 : 80,
+          paddingTop: isMobile ? 28 : 80,
+          paddingBottom: isMobile ? 28 : 80,
         }}
       >
         <div
