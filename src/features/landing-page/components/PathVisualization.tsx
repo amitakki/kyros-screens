@@ -57,10 +57,10 @@ export function PathVisualization({ content }: Props) {
   return (
     <div
       style={{
-        background: "var(--surface-raised)",
+        background: "linear-gradient(135deg, #fafafa 0%, #eef2ff 50%, #ede9fe 100%)",
         borderRadius: 20,
         padding: 24,
-        border: "1px solid var(--border-subtle)",
+        border: "1px solid #e0e7ff",
         boxShadow: "0 20px 60px rgba(79,70,229,0.1), 0 4px 16px rgba(0,0,0,0.06)",
       }}
     >

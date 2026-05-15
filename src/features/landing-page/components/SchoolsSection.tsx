@@ -37,50 +37,42 @@ export function SchoolsSection({ isMobile, schools, content }: Props) {
           >
             {content.title}
           </h2>
-          <p style={{ fontSize: 16, color: "var(--text-body)", maxWidth: 560, margin: "0 auto" }}>
+          <p style={{ fontSize: isMobile ? 14 : 16, color: "var(--text-body)", maxWidth: 560, margin: "0 auto" }}>
             {content.subtitle}
           </p>
         </div>
 
         {/* Exam board pills */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 8,
-            flexWrap: "wrap",
-            marginBottom: isMobile ? 28 : 36,
-          }}
-        >
-          <span style={{ fontSize: 13, color: "var(--text-subtle)", fontWeight: 500, marginRight: 4 }}>
+        <div style={{ textAlign: "center", marginBottom: isMobile ? 28 : 36 }}>
+          <p style={{ fontSize: 12, color: "var(--text-subtle)", fontWeight: 500, marginBottom: 10 }}>
             {content.examBoardsLabel}
-          </span>
-          {content.examBoards.map((board) => (
-            <span
-              key={board}
-              style={{
-                background: "var(--brand)",
-                color: "var(--brand-foreground)",
-                padding: "4px 14px",
-                borderRadius: 20,
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.03em",
-              }}
-            >
-              {board}
-            </span>
-          ))}
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 8 }}>
+            {content.examBoards.map((board) => (
+              <span
+                key={board}
+                style={{
+                  background: "var(--brand)",
+                  color: "var(--brand-foreground)",
+                  padding: "5px 16px",
+                  borderRadius: 20,
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.03em",
+                }}
+              >
+                {board}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* School chips */}
         <div
           style={{
-            display: "flex",
-            flexWrap: "wrap",
+            display: "grid",
+            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(auto-fill, minmax(180px, 1fr))",
             gap: 10,
-            justifyContent: "center",
             maxWidth: 960,
             margin: "0 auto 20px",
           }}
@@ -95,14 +87,14 @@ export function SchoolsSection({ isMobile, schools, content }: Props) {
                 background: "var(--surface-raised)",
                 border: "1px solid var(--border-subtle)",
                 borderRadius: 8,
-                padding: "8px 14px",
-                fontSize: 13,
+                padding: "8px 12px",
+                fontSize: isMobile ? 12 : 13,
                 fontWeight: 500,
                 color: "var(--text-heading)",
                 boxShadow: "var(--shadow-card)",
               }}
             >
-              <GraduationCap size={13} style={{ color: "var(--brand)", flexShrink: 0 }} />
+              <GraduationCap size={12} style={{ color: "var(--brand)", flexShrink: 0 }} />
               {school}
             </div>
           ))}
@@ -110,11 +102,12 @@ export function SchoolsSection({ isMobile, schools, content }: Props) {
             style={{
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
               background: "transparent",
               border: "1.5px dashed var(--brand-muted)",
               borderRadius: 8,
-              padding: "8px 14px",
-              fontSize: 13,
+              padding: "8px 12px",
+              fontSize: isMobile ? 12 : 13,
               fontWeight: 600,
               color: "var(--brand)",
             }}
