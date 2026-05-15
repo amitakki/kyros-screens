@@ -133,24 +133,26 @@ export function ParentChildCard({
           </Button>
         ) : (
           <>
-            <div className="flex flex-wrap gap-3">
-              <Button className="h-12 min-w-0 flex-[2] bg-brand text-sm font-semibold text-white hover:bg-brand-hover" size="lg">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button className="h-12 w-full bg-brand text-sm font-semibold text-white hover:bg-brand-hover sm:flex-[2]" size="lg">
                 {child.hasActivity
                   ? parentDashboardContent.continuePractice
                   : parentDashboardContent.startPractice}
               </Button>
-              <Link className="flex-1" to={ROUTES.childDetail(child.id)}>
-                <Button
-                  className="h-12 w-full text-sm font-semibold"
-                  size="lg"
-                  variant="outline"
-                >
-                  {parentDashboardContent.viewDetails}
+              <div className="flex gap-3 sm:contents">
+                <Link className="flex-1" to={ROUTES.childDetail(child.id)}>
+                  <Button
+                    className="h-12 w-full text-sm font-semibold"
+                    size="lg"
+                    variant="outline"
+                  >
+                    {parentDashboardContent.viewDetails}
+                  </Button>
+                </Link>
+                <Button className="h-12 px-4 shrink-0" size="lg" variant="ghost">
+                  <Download size={18} />
                 </Button>
-              </Link>
-              <Button className="h-12 px-4" size="lg" variant="ghost">
-                <Download size={18} />
-              </Button>
+              </div>
             </div>
             <div className="flex items-center justify-between">
               <label className="flex cursor-pointer items-center gap-2 text-sm text-text-body">
