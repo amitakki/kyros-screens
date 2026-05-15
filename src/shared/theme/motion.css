@@ -1,0 +1,9 @@
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  * {
+    transition-timing-function: var(--ease-standard);
+  }
+}

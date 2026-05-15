@@ -1,0 +1,129 @@
+{
+  "schoolSelection": {
+    "title": "Select Target Schools for Emma",
+    "description": "Choose up to 4 grammar schools Emma is applying to.",
+    "helper": "We tailor practice, difficulty, and mock exams based on each school's format.",
+    "callout": "Select at least 1 school. You can update this later.",
+    "selectedTitle": "Selected Schools",
+    "selectedHelper": "We'll personalise practice for these schools",
+    "availableTitle": "Available Schools",
+    "emptyState": "Select at least 1 school to continue",
+    "searchPlaceholder": "Search by school name or town...",
+    "addedLabel": "Added",
+    "examFormatLink": "View exam format",
+    "continueLabel": "Continue to dashboard",
+    "stepOneLabel": "Create Profile",
+    "stepTwoLabel": "Choose Schools",
+    "screenReader": {
+      "closeSelection": "Close school selection"
+    }
+  },
+  "regionOptions": {
+    "all": "All Regions",
+    "kent": "Kent",
+    "birmingham": "Birmingham",
+    "other": "Other"
+  },
+  "genderOptions": {
+    "all": "All Genders",
+    "boys": "Boys",
+    "girls": "Girls",
+    "coed": "Co-ed"
+  },
+  "sortOptions": {
+    "popular": "Popular",
+    "az": "A-Z"
+  },
+  "createChildProfile": {
+    "logoLabel": "LOGO",
+    "brandName": "Kyros",
+    "stepper": {
+      "step1Label": "Add Child",
+      "step2Label": "Choose Schools"
+    },
+    "breadcrumb": {
+      "dashboardLabel": "Dashboard",
+      "addChildLabel": "Add Child"
+    },
+    "childCounter": {
+      "prefix": "Child",
+      "suffix": "of {{limit}}",
+      "lastWarning": "⚠"
+    },
+    "titles": {
+      "firstChild": "Set up your first child's profile",
+      "lastChild": "Add your last child",
+      "otherChild": "Add another child"
+    },
+    "subtitles": {
+      "firstChild": "We'll use this to build a personalised learning path.",
+      "otherChild": "Each child gets their own learning path and progress."
+    },
+    "lastChildWarning": "⚠ This is your {{ordinal}} and final child profile (you can manage profiles anytime in settings).",
+    "personaliseNote": "This helps us personalise your child's learning path from day one.",
+    "timeNote": "Takes less than 1 minute",
+    "childInfoLabel": "Child Information",
+    "optionalLabel": "Optional",
+    "fields": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "e.g. Emma Thompson",
+        "helper": "First and last name"
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "e.g. emma_t",
+        "helperFallback": "These details are for your child to log in and practise",
+        "helperPrefix": "These details are for",
+        "helperSuffix": "to log in and practise",
+        "generateLabel": "Generate for me",
+        "availableText": "Available",
+        "takenText": "Taken"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Minimum 8 characters",
+        "helperFallback": "Used by your child to log in. You can reset anytime. Min 8 characters.",
+        "helperPrefix": "Used by",
+        "helperSuffix": "to log in. You can reset anytime. Min 8 characters."
+      },
+      "schoolYear": {
+        "label": "School Year",
+        "options": ["Year 4", "Year 5", "Year 6"],
+        "helper": "Most students start in Year 4 or Year 5"
+      },
+      "region": {
+        "label": "Region",
+        "placeholder": "Select region",
+        "options": [
+          { "value": "kent", "label": "Kent" },
+          { "value": "gloucestershire", "label": "Gloucestershire" },
+          { "value": "buckinghamshire", "label": "Buckinghamshire" },
+          { "value": "birmingham", "label": "Birmingham" },
+          { "value": "lincolnshire", "label": "Lincolnshire" },
+          { "value": "trafford", "label": "Trafford" },
+          { "value": "wiltshire", "label": "Wiltshire" },
+          { "value": "other", "label": "Other" }
+        ],
+        "helper": "Choose where your target schools are located"
+      },
+      "photo": {
+        "label": "Profile Photo",
+        "uploadText": "Upload a photo or drag and drop",
+        "uploadSubtext": "JPG or PNG, max 5MB",
+        "helperFallback": "Add a photo so your child recognises their account",
+        "helperPrefix": "Add a photo so",
+        "helperSuffix": "recognises their account",
+        "skipLabel": "Skip for now",
+        "fallbackNote": "A friendly avatar is used if skipped"
+      }
+    },
+    "navigation": {
+      "backFirstChild": "← Back",
+      "cancelLabel": "Cancel",
+      "continueFirstChild": "Continue to choose schools →",
+      "saveLast": "Save profile →",
+      "saveOther": "Save & choose schools →"
+    }
+  }
+}

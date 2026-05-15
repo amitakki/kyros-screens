@@ -1,0 +1,169 @@
+{
+  "page": {
+    "title": "Account Settings",
+    "description": "Manage your account, children, and learning preferences."
+  },
+  "header": {
+    "logoLabel": "LOGO",
+    "brandName": "Kyros",
+    "userInitial": "S",
+    "userName": "Sarah",
+    "navItems": [
+      { "label": "Dashboard", "path": "/parent", "active": false },
+      { "label": "Settings", "path": "/settings", "active": true },
+      { "label": "Billing", "path": "/parent/billing", "active": false }
+    ]
+  },
+  "tabs": {
+    "mobile": [
+      { "id": "profile", "label": "Profile" },
+      { "id": "children", "label": "Children" },
+      { "id": "notifications", "label": "Notifications" },
+      { "id": "password", "label": "Security" },
+      { "id": "privacy", "label": "Privacy" }
+    ],
+    "desktop": [
+      { "id": "profile", "label": "Profile" },
+      { "id": "children", "label": "Your Children" },
+      { "id": "notifications", "label": "Notifications" },
+      { "id": "password", "label": "Password & Security" },
+      { "id": "privacy", "label": "Data & Privacy" }
+    ]
+  },
+  "profile": {
+    "sectionLabel": "Your Profile",
+    "avatarInitial": "S",
+    "changePhotoLabel": "Change Photo",
+    "removePhotoLabel": "Remove Photo",
+    "fullNameLabel": "Full Name",
+    "emailLabel": "Email Address",
+    "googleBadgeLabel": "Connected with Google",
+    "googleEmailNote": "Google account — email cannot be changed here. Manage your email through your Google account.",
+    "changeEmailLabel": "Change Email",
+    "defaultFullName": "Sarah Thompson"
+  },
+  "children": {
+    "sectionLabel": "Your Children",
+    "editLabel": "Edit Profile",
+    "manageSchoolsLabel": "Manage Schools",
+    "archiveLabel": "🗑 Archive",
+    "diagnosticPendingLabel": "Diagnostic pending",
+    "lastActivePrefix": "Last active",
+    "addChildLabel": "+ Add Child Profile",
+    "addChildNote": "Each child gets a separate learning path and progress dashboard.",
+    "addChildPath": "/onboarding/create-child?childNumber=3"
+  },
+  "notifications": {
+    "sectionLabel": "Notification Preferences",
+    "groups": [
+      {
+        "title": "Practice Updates",
+        "items": [
+          {
+            "key": "topicComplete",
+            "label": "Email when a child completes a topic",
+            "sublabel": "Sent after each topic is finished",
+            "disabled": false,
+            "disabledTitle": ""
+          },
+          {
+            "key": "inactivity",
+            "label": "Alert when a child hasn't practised for 3+ days",
+            "sublabel": "A gentle nudge to keep momentum",
+            "disabled": false,
+            "disabledTitle": ""
+          }
+        ]
+      },
+      {
+        "title": "Weekly Insights",
+        "items": [
+          {
+            "key": "weeklySummary",
+            "label": "Weekly progress summary email",
+            "sublabel": "Every Monday — overview of the past week",
+            "disabled": false,
+            "disabledTitle": ""
+          }
+        ]
+      },
+      {
+        "title": "Milestones & Achievements",
+        "items": [
+          {
+            "key": "milestones",
+            "label": "Milestone achievements",
+            "sublabel": "When a child reaches 50% or 100% of their path",
+            "disabled": false,
+            "disabledTitle": ""
+          }
+        ]
+      },
+      {
+        "title": "Account & Billing",
+        "items": [
+          {
+            "key": "trialExpiry",
+            "label": "Trial expiry reminders 🔒",
+            "sublabel": "Sent on day 5–6 of your free trial",
+            "disabled": true,
+            "disabledTitle": "Trial reminders are always sent during your trial"
+          }
+        ]
+      }
+    ]
+  },
+  "password": {
+    "sectionLabel": "Password & Security",
+    "googleSecuredText": "Your account is secured by Google.",
+    "googleSecuredNote": "Password management is handled through your Google account. Visit myaccount.google.com to update your security settings.",
+    "googleSettingsLabel": "Open Google Account Settings",
+    "currentPasswordLabel": "Current Password",
+    "newPasswordLabel": "New Password",
+    "confirmPasswordLabel": "Confirm New Password",
+    "passwordMatchText": "✓ Passwords match",
+    "passwordMismatchText": "✗ Passwords don't match",
+    "updatePasswordLabel": "Update Password",
+    "sessionsSectionLabel": "Active Sessions",
+    "currentSessionDesc": "Chrome on macOS — London, UK",
+    "currentSessionBadge": "Current session",
+    "signOutAllLabel": "Sign out all other sessions"
+  },
+  "privacy": {
+    "sectionLabel": "Data & Privacy",
+    "downloadTitle": "Download Your Data",
+    "downloadDesc": "Download a complete copy of your account data including your profile, children's profiles, test history, and learning progress. Exported as a JSON file.",
+    "downloadLabel": "⬇ Download My Data",
+    "downloadNotePrefix": "Your download will be ready within a few minutes. We'll email you a link to",
+    "deleteTitle": "Delete Account",
+    "deleteDesc": "Permanently delete your Kyros account and all associated data. Your account will be deactivated immediately and all data will be permanently deleted after 30 days.",
+    "deleteWarnings": [
+      "Your active subscription will be cancelled",
+      "All children's profiles and progress will be archived",
+      "Downloaded data will remain with you",
+      "This action cannot be reversed after 30 days"
+    ],
+    "deleteLabel": "Delete My Account"
+  },
+  "archiveModal": {
+    "descriptionSuffix": "'s profile will be archived for 30 days. During this time, you can restore it from this page. After 30 days, all data is permanently deleted including: learning progress · scores and reports · diagnostic results · target schools",
+    "checkboxPrefix": "I understand ",
+    "checkboxSuffix": "'s profile will be archived and permanently deleted after 30 days",
+    "cancelLabel": "Cancel",
+    "confirmLabel": "Archive Profile"
+  },
+  "deleteModal": {
+    "title": "Delete your Kyros account?",
+    "description": "This will immediately deactivate your account. All data will be permanently deleted after 30 days. Your subscription will be cancelled with no refund for the remaining billing period.",
+    "inputLabel": "Type DELETE to confirm",
+    "inputPlaceholder": "DELETE",
+    "confirmKeyword": "DELETE",
+    "cancelLabel": "Cancel",
+    "confirmLabel": "Delete My Account"
+  },
+  "saveBar": {
+    "unsavedMessage": "You have unsaved changes",
+    "discardLabel": "Discard",
+    "saveLabel": "Save Changes"
+  }
+}

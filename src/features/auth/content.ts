@@ -1,0 +1,53 @@
+import i18next from '../../shared/i18n/config';
+
+const t = (key: string) => i18next.t(key, { ns: 'auth' });
+
+export const loginContent = {
+  panelOverviewLabel: t('login.panelOverviewLabel'),
+  panelHeading: t('login.panelHeading'),
+  testimonialQuote: t('login.testimonialQuote'),
+  testimonialName: t('login.testimonialName'),
+  testimonialSchool: t('login.testimonialSchool'),
+  welcomeHeading: t('login.welcomeHeading'),
+  subheading: t('login.subheading'),
+  googleLabel: t('login.googleLabel'),
+  dividerText: t('login.dividerText'),
+  emailLabel: t('login.emailLabel'),
+  emailPlaceholder: t('login.emailPlaceholder'),
+  passwordLabel: t('login.passwordLabel'),
+  passwordPlaceholder: t('login.passwordPlaceholder'),
+  forgotPasswordLabel: t('login.forgotPasswordLabel'),
+  submitLabel: t('login.submitLabel'),
+  noAccountText: t('login.noAccountText'),
+  signUpLabel: t('login.signUpLabel'),
+  trustLine: t('login.trustLine'),
+};
+
+export const registerContent = {
+  trialBadge: t('register.trialBadge'),
+  panelHeading: t('register.panelHeading'),
+  heading: t('register.heading'),
+  subheading: t('register.subheading'),
+  googleLabel: t('register.googleLabel'),
+  dividerText: t('register.dividerText'),
+  fullNameLabel: t('register.fullNameLabel'),
+  fullNamePlaceholder: t('register.fullNamePlaceholder'),
+  emailLabel: t('register.emailLabel'),
+  emailPlaceholder: t('register.emailPlaceholder'),
+  passwordLabel: t('register.passwordLabel'),
+  passwordPlaceholder: t('register.passwordPlaceholder'),
+  termsPrefix: t('register.termsPrefix'),
+  termsOfServiceLabel: t('register.termsOfServiceLabel'),
+  termsConjunction: t('register.termsConjunction'),
+  privacyPolicyLabel: t('register.privacyPolicyLabel'),
+  submitLabel: t('register.submitLabel'),
+  perks: i18next.t('register.perks', { ns: 'auth', returnObjects: true }) as string[],
+  alreadyHaveAccountText: t('register.alreadyHaveAccountText'),
+  loginLabel: t('register.loginLabel'),
+  illustrationSubjectLabel: t('register.illustrationSubjectLabel'),
+  illustrationCompletedBadge: t('register.illustrationCompletedBadge'),
+  illustrationTopicTitle: t('register.illustrationTopicTitle'),
+  illustrationTopicSubtitle: t('register.illustrationTopicSubtitle'),
+  illustrationCompletedTopic: t('register.illustrationCompletedTopic'),
+  illustrationExamReady: t('register.illustrationExamReady'),
+};

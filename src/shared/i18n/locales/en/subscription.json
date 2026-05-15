@@ -1,0 +1,170 @@
+{
+  "title": "Subscription & Billing",
+  "description": "Manage your subscription, payment methods, and billing history.",
+  "supportPrompt": "Need help with billing?",
+  "supportCta": "Contact support ->",
+  "planStateCards": {
+    "active": {
+      "title": "Annual Plan",
+      "badge": "Active",
+      "price": "£79.99",
+      "period": "/ year",
+      "savings": "Save 33% compared to monthly billing",
+      "renewsOn": "Renews on 15 January 2026",
+      "nextPayment": "Next payment: £79.99 on 15 January 2026",
+      "profileUsage": "2 of 3 child profiles currently used",
+      "features": [
+        "Unlimited practice tests",
+        "Up to 3 child profiles",
+        "Full question bank - 8,863 questions",
+        "Progress tracking & PDF reports"
+      ],
+      "changePlanCta": "Change Plan",
+      "cancelCta": "Cancel subscription",
+      "helper": "You'll keep full access until your current billing period ends."
+    },
+    "trial": {
+      "title": "Free Trial",
+      "badge": "Trial Active",
+      "remainingDays": "3",
+      "remainingLabel": "days remaining",
+      "endsOn": "Trial ends on 18 December 2024",
+      "features": [
+        "Full access to all features",
+        "Unlimited practice tests",
+        "Up to 3 child profiles",
+        "No card required during trial"
+      ],
+      "notice": "No payment method on file - you won't be charged until you choose a plan after your trial ends.",
+      "choosePlanCta": "Choose a Plan",
+      "helper": "Pick a plan before your trial ends to keep Emma's progress.",
+      "downgradeNotice": "If you don't choose a plan, your account will revert to limited access (2 tests total) at the end of your trial."
+    },
+    "cancelled": {
+      "title": "Annual Plan",
+      "badge": "Cancelled",
+      "accessUntilLabel": "Full access until:",
+      "accessUntilDate": "15 January 2026",
+      "helper": "After this date, your account reverts to limited access.",
+      "afterTitle": "After 15 January 2026:",
+      "afterItems": [
+        "Tests limited to 2 total",
+        "No learning path access",
+        "No PDF reports or mock exams"
+      ],
+      "reactivateCta": "Reactivate Subscription",
+      "reactivateHelper": "Reactivate now to keep uninterrupted access. Your next billing date will remain 15 January 2026.",
+      "reactivateLink": "Changed your mind? Reactivate before 15 Jan 2026 ->"
+    },
+    "pastdue": {
+      "title": "Annual Plan",
+      "badge": "Payment Failed",
+      "errorSummary": "We couldn't process your payment of £79.99 on 15 January 2026.",
+      "retryNotice": "We'll retry on 18 January 2026 (attempt 1 of 3).",
+      "warning": "Update your payment method to avoid losing access.",
+      "cardSummary": "Visa **** 4242 - Exp. 08/27",
+      "cardStatus": "Payment failed",
+      "updatePaymentCta": "Update Payment Method",
+      "updateHelper": "Updating your card will trigger an immediate retry.",
+      "retrySchedule": "Retry 1: 18 Jan | Retry 2: 23 Jan | Final: 30 Jan",
+      "cancelNotice": "Your subscription will be cancelled if payment fails 3 times."
+    }
+  },
+  "cancelModal": {
+    "title": "Cancel your subscription?",
+    "intro": "You'll keep full access until 15 January 2026.",
+    "introDetail": "Your children's learning progress, reports, scores, and school setup will remain available until then.",
+    "downgradeTitle": "After 15 January 2026, your account reverts to:",
+    "downgradeItems": [
+      "Tests limited to 2 total",
+      "No learning path access",
+      "No mock exams or PDF reports"
+    ],
+    "pauseCta": "Pause subscription instead ->",
+    "feedbackLabel": "Help us improve (optional)",
+    "reasonPlaceholder": "Select a reason",
+    "feedbackPlaceholder": "Tell us more (optional)",
+    "keepCta": "Keep My Subscription",
+    "cancelCta": "Cancel Subscription",
+    "reasons": [
+      "Too expensive",
+      "Child no longer needs it",
+      "Switching to a different service",
+      "Not using it enough",
+      "Technical issues",
+      "Other"
+    ]
+  },
+  "availablePlans": {
+    "title": "Available Plans",
+    "description": "Plan changes take effect at your next billing cycle.",
+    "currentPlanLabel": "Your Current Plan",
+    "plans": [
+      {
+        "badge": "Most Flexible",
+        "price": "£9.99",
+        "period": "/ month",
+        "meta": "Flexible monthly billing",
+        "features": [
+          "All features included",
+          "Cancel or change anytime",
+          "Full question bank"
+        ],
+        "cta": "Switch to Monthly",
+        "helper": "You'll keep Annual access until 15 Jan 2026"
+      },
+      {
+        "badge": "Save £5",
+        "price": "£24.99",
+        "period": "/ quarter",
+        "meta": null,
+        "savings": "Save £5 vs monthly",
+        "features": [
+          "All features included",
+          "Cancel or change anytime",
+          "Full question bank"
+        ],
+        "cta": "Switch to Quarterly",
+        "helper": "You'll keep Annual access until 15 Jan 2026"
+      },
+      {
+        "badge": "Best Value",
+        "price": "£79.99",
+        "period": "/ year",
+        "meta": null,
+        "savings": "Save 33% vs monthly billing",
+        "features": [
+          "All features included",
+          "Cancel or change anytime",
+          "Full question bank",
+          "Priority support"
+        ],
+        "cta": "Current Plan ✓",
+        "helper": "You're on this plan - no action needed"
+      }
+    ]
+  },
+  "paymentMethod": {
+    "title": "Payment Method",
+    "emptyState": "No payment method added yet",
+    "brand": "VISA",
+    "cardNumber": "•••• •••• •••• 4242",
+    "expiry": "Exp. 08/27",
+    "status": "Active",
+    "securityLabel": "Secured by Stripe",
+    "addCta": "Add Payment Method",
+    "updateCta": "Update Payment Method"
+  },
+  "billingHistory": {
+    "title": "Billing History",
+    "description": "Receipts are automatically emailed after each payment.",
+    "columns": ["Date", "Description", "Amount", "Status", "Receipt"],
+    "downloadCta": "Download",
+    "exportCsvCta": "↓ Export CSV",
+    "exportPdfCta": "↓ Export PDF",
+    "rows": [
+      { "date": "15 Jan 2025", "desc": "Annual Plan", "amount": "£79.99", "status": "Paid" },
+      { "date": "15 Jan 2024", "desc": "Annual Plan", "amount": "£79.99", "status": "Paid" }
+    ]
+  }
+}

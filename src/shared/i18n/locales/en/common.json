@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "billing": "Billing"
+  },
+  "userMenu": {
+    "parentDashboard": "Parent Dashboard",
+    "accountSettings": "Account Settings",
+    "subscriptionBilling": "Subscription & Billing",
+    "logOut": "Log out"
+  },
+  "aria": {
+    "closeNav": "Close navigation",
+    "openNav": "Open navigation"
+  },
+  "brand": {
+    "name": "Kyros",
+    "logoLabel": "LOGO"
+  },
+  "actions": {
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "discard": "Discard",
+    "continue": "Continue",
+    "back": "Back"
+  }
+}

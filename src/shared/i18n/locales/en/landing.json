@@ -1,0 +1,338 @@
+{
+  "header": {
+    "brandName": "Kyros",
+    "navItems": ["How It Works", "Schools", "Pricing", "FAQ"],
+    "loginLabel": "Log in",
+    "startTrialLabel": "Start Free Trial",
+    "logoLabel": "LOGO"
+  },
+  "hero": {
+    "eyebrow": "GL Assessment · CEM · Kent Test · ISEB",
+    "titleLines": ["Give your child", "the confidence", "to shine"],
+    "description": "Adaptive practice and a clear path to exam day, built around your child from the very first question.",
+    "proofItems": [
+      { "icon": "⭐", "label": "4.9/5 from 1,200+ parents" },
+      { "icon": "🏫", "label": "Used for 288 grammar schools" },
+      { "icon": "👨‍👩‍👧", "label": "Trusted by 10,000+ families" }
+    ],
+    "primaryCtaLabel": "Start Your Free 7-Day Trial",
+    "microcopy": "No card required · Cancel anytime · Takes 2 minutes to set up",
+    "steps": ["Sign up free", "Take diagnostic", "Get personalised plan"],
+    "trustItems": [
+      { "icon": "lock", "label": "Safe for children" },
+      { "icon": "check", "label": "Cancel in 2 clicks" },
+      { "icon": "shield", "label": "GDPR compliant" }
+    ]
+  },
+  "schoolTicker": {
+    "prefix": "Families preparing for:",
+    "suffix": "and 277 more ->"
+  },
+  "schools": [
+    "Tonbridge Grammar",
+    "The Judd School",
+    "Invicta Grammar",
+    "Dartford Grammar",
+    "Weald of Kent",
+    "Simon Langton",
+    "King Edward's Birmingham",
+    "Withington Girls'",
+    "Reading School",
+    "Henrietta Barnett",
+    "St Olave's Grammar",
+    "Tiffin School",
+    "Wallington County",
+    "Wilson's School",
+    "Altrincham Grammar"
+  ],
+  "faqItems": [
+    {
+      "q": "Is this suitable for my child's level?",
+      "a": "Yes. Our diagnostic test assesses your child's current level across all four subjects on day one and builds a path that starts exactly where they are, whether just starting out or already well ahead."
+    },
+    {
+      "q": "How is this different from books or a tutor?",
+      "a": "Books give everyone the same content. Tutors are expensive and limited by availability. Kyros adapts to your child's performance, tracks progress automatically, and is available any time for the price of a single tutoring hour per month."
+    },
+    {
+      "q": "How often should my child practise?",
+      "a": "20-30 minutes a day is more effective than long weekend sessions. Kyros is designed for short, focused daily practice, and each topic takes around 20 minutes to complete."
+    },
+    {
+      "q": "Do you cover all exam boards?",
+      "a": "Yes. GL Assessment, CEM, Kent Test, and ISEB formats are all covered. Select your child's target schools when setting up their profile and we tailor the content accordingly."
+    },
+    {
+      "q": "Can I track my child's progress?",
+      "a": "Yes. The parent dashboard shows progress across all four subjects, highlights weak areas, tracks scores over time, and lets you download a full PDF report at any time."
+    }
+  ],
+  "tryAQuestion": {
+    "title": "Try a sample question",
+    "description": "See how Kyros explains every answer — right or wrong.",
+    "questionBadge": "Maths · Topic 8",
+    "difficultyBadge": "Medium",
+    "question": "2x + 5 = 13",
+    "submitLabel": "Submit Answer",
+    "correctBadge": "✓ Correct",
+    "explanationTitle": "Step-by-step explanation",
+    "explanationSteps": [
+      { "label": "Step 1:", "text": "Subtract 5 from both sides: 2x = 8" },
+      { "label": "Step 2:", "text": "Divide both sides by 2: x = 4 ✓" }
+    ],
+    "ctaLabel": "Start your free trial to continue practice",
+    "ctaSubtext": "Every question includes step-by-step explanations",
+    "answerOptions": [
+      { "id": "A", "text": "x = 2" },
+      { "id": "B", "text": "x = 3" },
+      { "id": "C", "text": "x = 4" },
+      { "id": "D", "text": "x = 5" },
+      { "id": "E", "text": "x = 6" }
+    ],
+    "correctAnswer": "C"
+  },
+  "faqSection": {
+    "title": "Questions parents ask",
+    "moreQuestionsLabel": "More questions?",
+    "helpCenterLabel": "Visit our Help Centre ->",
+    "helpCenterHref": "#"
+  },
+  "outcomesStrip": {
+    "stats": [
+      { "number": "+22%", "label": "average improvement in 8 weeks" },
+      { "number": "87%", "label": "of students reach exam-ready level" },
+      { "number": "3 in 5", "label": "students improve by at least one grade band" }
+    ],
+    "footnote": "Based on data from 1,200+ students using structured learning paths"
+  },
+  "howItWorks": {
+    "title": "A clear path from day one to exam day",
+    "description": "Start early. Stay ahead. Know exactly when your child is exam-ready.",
+    "steps": [
+      {
+        "icon": "bar-chart",
+        "eyebrow": "Discover",
+        "title": "Find the starting point",
+        "description": "A 40-question diagnostic across all four subjects. Instant results. Personalised path generated immediately.",
+        "linkLabel": "Find your child's starting point",
+        "linkHref": "#"
+      },
+      {
+        "icon": "zap",
+        "eyebrow": "Adapt",
+        "title": "Practice that adjusts to them",
+        "description": "Questions adapt to your child's level as they progress. Topics unlock one by one. Always the right next step."
+      },
+      {
+        "icon": "flag",
+        "eyebrow": "Succeed",
+        "title": "Arrive at exam day ready",
+        "description": "Full mock exams in GL Assessment, CEM, Kent Test and ISEB formats. Timed, marked, and explained in full.",
+        "linkLabel": "See the full learning path",
+        "linkHref": "#"
+      }
+    ],
+    "ctaLabel": "Find your child's starting point",
+    "quote": {
+      "body": "She started enjoying practice. That told me everything.",
+      "avatarLabel": "S",
+      "attribution": "Parent, Year 5, Kent"
+    }
+  },
+  "pathVisualization": {
+    "pathLabel": "Emma's Learning Path — Maths",
+    "progressBadge": "7 of 20 topics ✓",
+    "examReadyLabel": "Exam ready",
+    "completeLabel": "complete",
+    "overallProgress": "35%",
+    "completedBadge": "Topic 7 ✓ — 92%",
+    "activeTopic": {
+      "title": "Topic 8 — Basic Algebra",
+      "subtitle": "Adapted to Emma · Medium difficulty",
+      "progress": "70%",
+      "note": "Your best: 70% — keep going!"
+    }
+  },
+  "featureSpotlight": {
+    "eyebrow": "Adaptive Learning Path",
+    "titleLines": ["Always the right", "question at the", "right time"],
+    "descriptionDesktop": "Our platform continuously adjusts to your child's performance. Topics unlock in the right order. Questions calibrate to their level. And you always know exactly where they stand.",
+    "descriptionMobile": "Our platform continuously adjusts to your child's performance. Topics unlock in the right order. Questions calibrate to their level.",
+    "bullets": [
+      "20 structured topics per subject, unlocking progressively",
+      "Questions adapt to your child's level in real time",
+      "Weak areas surfaced and prioritised automatically",
+      "Parent dashboard shows progress across all four subjects"
+    ],
+    "ctaLabel": "See your personalised learning path",
+    "mockup": {
+      "topicGrid": {
+        "subjects": ["Maths", "English", "Verbal Reasoning", "Non-Verbal Reasoning"],
+        "topicLabels": [
+          "Place Value", "Addition & Sub", "Multiplication", "Division",
+          "Fractions", "Decimals", "Percentages", "Basic Algebra",
+          "Ratio & Proportion", "Geometry", "Measures", "Statistics",
+          "Number Patterns", "Problem Solving", "Word Problems", "Shape & Space",
+          "Data Handling", "Mental Maths", "Mixed Review", "Mock Exam Prep"
+        ],
+        "topicScores": [
+          "94%", "88%", "91%", "85%", "90%", "87%", "92%", "",
+          "", "", "", "", "", "", "", "", "", "", "", ""
+        ],
+        "inProgressLabel": "In Progress",
+        "adaptationHighlight": "Based on Emma's results,",
+        "adaptationBody": "we've adjusted Topic 8 to focus on word problems — her biggest growth opportunity."
+      },
+      "parentDashboard": {
+        "studentName": "Emma Thompson · Year 5 · Kent",
+        "lastActive": "Last active: today · 🔥 5-day streak",
+        "liveLabel": "Live",
+        "subjectNames": ["Maths", "English", "Verbal Reasoning", "Non-Verbal"],
+        "tagline": "See exactly where your child stands at any time"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Families who made it",
+    "items": [
+      {
+        "quote": "Went from 60% to 85% in 2 months. She got into Invicta.",
+        "author": "Sarah M. — Maidstone, Kent",
+        "school": "Invicta Grammar ✓",
+        "badge": "+25 points"
+      },
+      {
+        "quote": "Got into Judd after really struggling with maths. The path made the difference — he always knew what to do next.",
+        "author": "James T. — Tonbridge, Kent",
+        "school": "The Judd School ✓",
+        "badge": "Maths: 58% → 81%"
+      },
+      {
+        "quote": "Her confidence went through the roof. King Edward's — first choice.",
+        "author": "Priya K. — Birmingham",
+        "school": "King Edward's ✓",
+        "badge": "+22 points in 8 weeks"
+      }
+    ],
+    "ratingScore": "4.9 / 5",
+    "ratingCount": "from 1,200+ parents"
+  },
+  "whoIsItFor": {
+    "title": "Built for 11+ students",
+    "worksForTitle": "Kyros works for:",
+    "worksForItems": [
+      "Year 4–6 students starting early",
+      "Students needing structured revision",
+      "Children targeting top grammar schools",
+      "Beginners with no prior prep experience"
+    ],
+    "subjectsTitle": "All four subjects covered:",
+    "subjects": [
+      { "abbr": "M", "name": "Maths", "desc": "From times tables to algebra and ratio" },
+      { "abbr": "E", "name": "English", "desc": "Comprehension, vocabulary and writing skills" },
+      { "abbr": "VR", "name": "Verbal Reasoning", "desc": "Codes, analogies and word patterns" },
+      { "abbr": "NVR", "name": "Non-Verbal Reasoning", "desc": "Shapes, sequences and spatial reasoning" }
+    ],
+    "footerNote": "Covers GL Assessment, CEM, Kent Test and ISEB formats"
+  },
+  "whyKyros": {
+    "title": "Why parents choose Kyros",
+    "points": [
+      {
+        "icon": "target",
+        "title": "No more guessing what to practise",
+        "desc": "The diagnostic shows exactly where to start. The learning path shows exactly what comes next."
+      },
+      {
+        "icon": "clock",
+        "title": "No wasted time on the wrong topics",
+        "desc": "Questions adapt to your child's level. Topics unlock in the right order. Every minute counts."
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Clear progress every week",
+        "desc": "See scores, track improvement, and know when your child is exam-ready — all in one dashboard."
+      }
+    ]
+  },
+  "beforeAfter": {
+    "title": "What changes when you use Kyros",
+    "headerWithout": "Without Kyros",
+    "headerWith": "With Kyros",
+    "rows": [
+      { "feature": "Learning approach", "without": "Random practice", "with": "Structured path to exam day" },
+      { "feature": "Weak areas", "without": "Unknown until too late", "with": "Identified from day one" },
+      { "feature": "Scores over time", "without": "Inconsistent, unpredictable", "with": "Steady, tracked improvement" },
+      { "feature": "Parent visibility", "without": "Guessing how they're doing", "with": "Live progress dashboard" },
+      { "feature": "Exam readiness", "without": "Exam format a mystery", "with": "Real mock exams, real formats" }
+    ],
+    "examplePill": {
+      "prefix": "Emma:",
+      "highlight": "52% → 78%",
+      "suffix": "in 6 weeks · Year 5 · Target: Tonbridge Grammar"
+    }
+  },
+  "pricing": {
+    "title": "Simple pricing. Everything included.",
+    "subtitle": "Every subject · every topic · every mock exam · one plan.",
+    "plans": [
+      {
+        "label": "Monthly",
+        "price": "£9.99",
+        "unit": "/month",
+        "savingBadge": "",
+        "popularLabel": "",
+        "priceHighlight": "",
+        "perDay": "≈ £0.33 per day",
+        "ctaLabel": "Start Free Trial"
+      },
+      {
+        "label": "Quarterly",
+        "price": "£24.99",
+        "unit": "/quarter",
+        "savingBadge": "Save £5",
+        "popularLabel": "MOST POPULAR",
+        "priceHighlight": "",
+        "perDay": "≈ £0.28 per day",
+        "ctaLabel": "Start your child's plan →"
+      },
+      {
+        "label": "Annual",
+        "price": "£79.99",
+        "unit": "/year",
+        "savingBadge": "Save £40",
+        "popularLabel": "",
+        "priceHighlight": "Just £6.67/month",
+        "perDay": "≈ £0.22 per day",
+        "ctaLabel": "Start your child's plan →"
+      }
+    ],
+    "riskReducers": [
+      "7-day free trial",
+      "Cancel anytime in 2 clicks",
+      "No long-term commitment"
+    ],
+    "paymentFooter": "Stripe · SSL secured · GDPR compliant · All prices include VAT",
+    "featureItems": [
+      "Adaptive learning path — all 4 subjects",
+      "Personalised diagnostic from day one",
+      "Unlimited mock exams (GL · CEM · Kent · ISEB)",
+      "Parent progress dashboard"
+    ]
+  },
+  "footer": {
+    "logoLabel": "LOGO",
+    "brandName": "Kyros",
+    "brandTagline": "The adaptive path to grammar school success.",
+    "sections": [
+      { "title": "Platform", "links": ["How It Works", "Learning Path", "Mock Exams", "Pricing"] },
+      { "title": "Schools", "links": ["Browse Schools", "GL Assessment", "CEM", "Kent Test", "ISEB"] },
+      { "title": "Support", "links": ["Help", "Contact", "Privacy", "Terms"] }
+    ],
+    "ctaTitle": "Start Free Trial",
+    "ctaSubtext": "No card required",
+    "ctaLabel": "Get started →",
+    "copyright": "© 2024 Kyros. All rights reserved.",
+    "legalNote": "Stripe · SSL secured · GDPR compliant"
+  }
+}

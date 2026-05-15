@@ -1,49 +1,50 @@
 import { createBrowserRouter } from "react-router";
-import { LandingPage } from "./components/LandingPage";
-import { RegisterPage } from "./components/RegisterPage";
-import { LoginPage } from "./components/LoginPage";
-import { CreateChildProfile } from "./components/CreateChildProfile";
-import { SchoolSelection } from "./components/SchoolSelection";
-import { ParentDashboard } from "./components/ParentDashboard";
-import { ChildDetailView } from "./components/ChildDetailView";
-import { AccountSettings } from "./components/AccountSettings";
-import { SubscriptionBilling } from "./components/SubscriptionBilling";
+import { RegisterPage } from "../features/auth/pages/RegisterPage";
+import { LoginPage } from "../features/auth/pages/LoginPage";
+import { CreateChildProfilePage as CreateChildProfile } from "../features/onboarding/pages/CreateChildProfilePage";
+import { AccountSettingsPage as AccountSettings } from "../features/settings/pages/AccountSettingsPage";
+import { SchoolSelectionPage } from "../features/onboarding/pages/SchoolSelectionPage";
+import { ChildDetailPage } from "../features/dashboard/pages/ChildDetailPage";
+import { ParentDashboardPage } from "../features/dashboard/pages/ParentDashboardPage";
+import { LandingPage } from "../features/landing-page/pages/LandingPage";
+import { SubscriptionBilling } from "../features/subscription/pages/SubscriptionBillingPage";
+import { ROUTES } from "../shared/constants/routes";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTES.home,
     Component: LandingPage,
   },
   {
-    path: "/register",
+    path: ROUTES.register,
     Component: RegisterPage,
   },
   {
-    path: "/login",
+    path: ROUTES.login,
     Component: LoginPage,
   },
   {
-    path: "/onboarding/create-child",
+    path: ROUTES.onboardingCreateChild,
     Component: CreateChildProfile,
   },
   {
-    path: "/onboarding/select-schools",
-    Component: SchoolSelection,
+    path: ROUTES.onboardingSelectSchools,
+    Component: SchoolSelectionPage,
   },
   {
-    path: "/parent",
-    Component: ParentDashboard,
+    path: ROUTES.parentDashboard,
+    Component: ParentDashboardPage,
   },
   {
-    path: "/parent/children/:childId",
-    Component: ChildDetailView,
+    path: ROUTES.childDetail(":childId"),
+    Component: ChildDetailPage,
   },
   {
-    path: "/settings",
+    path: ROUTES.settings,
     Component: AccountSettings,
   },
   {
-    path: "/parent/billing",
+    path: ROUTES.billing,
     Component: SubscriptionBilling,
   },
 ]);
