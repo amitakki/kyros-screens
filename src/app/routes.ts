@@ -7,6 +7,8 @@ import { SchoolSelectionPage } from "../features/onboarding/pages/SchoolSelectio
 import { ChildDetailPage } from "../features/dashboard/pages/ChildDetailPage";
 import { ParentDashboardPage } from "../features/dashboard/pages/ParentDashboardPage";
 import { LandingPage } from "../features/landing-page/pages/LandingPage";
+import { LandingPageV1 } from "../features/landing-page/pages/LandingPageV1";
+import { LandingPageV2 } from "../features/landing-page/pages/LandingPageV2";
 import { SubscriptionBilling } from "../features/subscription/pages/SubscriptionBillingPage";
 import { ROUTES } from "../shared/constants/routes";
 import { RootLayout } from "./RootLayout";
@@ -18,6 +20,14 @@ export const router = createBrowserRouter([
       {
         path: ROUTES.home,
         Component: LandingPage,
+      },
+      {
+        path: ROUTES.landingV1,
+        Component: LandingPageV1,
+      },
+      {
+        path: ROUTES.landingV2,
+        Component: LandingPageV2,
       },
       {
         path: ROUTES.register,
